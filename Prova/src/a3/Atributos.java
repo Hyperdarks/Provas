@@ -3,9 +3,9 @@ package a3;
 public class Atributos extends Biblioteca{
 	private String atributo;
 	private int id;
-	private int quantLivro;
+	private String quantLivro;
 	private String assuntoLivro, autorLivro, nomeLivro;
-	private double preco;
+	private String preco;
 
 	public String getAssuntoLivro() {
 		return assuntoLivro;
@@ -31,19 +31,19 @@ public class Atributos extends Biblioteca{
 		this.nomeLivro = nomeLivro;
 	}
 
-	public double getPreco() {
+	public String getPreco() {
 		return preco;
 	}
 
-	public void setPreco(double preco) {
+	public void setPreco(String preco) {
 		this.preco = preco;
 	}
 
-	public int getQuantLivro() {
+	public String getQuantLivro() {
 		return quantLivro;
 	}
 
-	public void setQuantLivro(int quantLivro) {
+	public void setQuantLivro(String quantLivro) {
 		this.quantLivro = quantLivro;
 	}
 	public int getId() {
@@ -54,9 +54,9 @@ public class Atributos extends Biblioteca{
 		this.id = id;
 	}
 
-	public String atributos() {
-		return atributo = "Nome do livro: " + nomeLivro + "\nAutor do livro: " + autorLivro + "\nAssunto do livro: " + assuntoLivro
-				+"\npreco do livro: "+preco + "\nQuantidade de livros: "+ quantLivro;
+	public String atributo() {
+		return atributo = "Nome do livro: " + getNomeLivro() + "\nAutor do livro: " + getAutorLivro() + "\nAssunto do livro: " + getAssuntoLivro()
+				+"\npreco do livro: "+getPreco() + "\nQuantidade de livros: "+ getQuantLivro();
 	}
 
 
