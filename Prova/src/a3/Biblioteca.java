@@ -19,7 +19,8 @@ public class Biblioteca {
 			resp = 'o';
 			System.out.println("1- adicionar um novo livro (objeto) ao seu carrinho"
 					+ "\n2 - Editar/Atualizar uma informação de um livro no seu carrinho"
-					+ "\n3- remover um atributo de um livro do seu carrinho" + "\n4- Ver um livro especifico no seu carrinho" + "");
+					+ "\n3- remover um atributo de um livro do seu carrinho"
+					+ "\n4- Ver um livro especifico no seu carrinho" + "");
 			System.out.printf("O que vocè quer fazer? ");
 			resp2 = sc.nextInt();
 			if (resp2 == 1) {
@@ -37,11 +38,13 @@ public class Biblioteca {
 				System.out.println(at.atributo());
 				at.setId(count);
 				System.out.println(count);
-				id.arrayID(at.getId(), at.getNomeLivro(), at.getAutorLivro(), at.getAssuntoLivro(), at.getPreco(), at.getQuantLivro());
+				id.arrayID(at.getId(), at.getNomeLivro(), at.getAutorLivro(), at.getAssuntoLivro(), at.getPreco(),
+						at.getQuantLivro());
 				System.out.println("id do produto no carrinho: " + at.getId());
 				System.out.println(id.getArrayId(count));
 				count++;
-				//id.arrayID(i.toString(), at.getNomeLivro(), at.getAutorLivro(), at.getAssuntoLivro(), at.getPreco(), at.getQuantLivro());
+				// id.arrayID(i.toString(), at.getNomeLivro(), at.getAutorLivro(),
+				// at.getAssuntoLivro(), at.getPreco(), at.getQuantLivro());
 			}
 			System.out.println(count);
 			if (resp2 == 2) {
@@ -50,12 +53,14 @@ public class Biblioteca {
 				id.mudarAtributos(esc);
 				System.out.println(id.getArrayId(esc));
 
-			}if(resp2 ==3) {
+			}
+			if (resp2 == 3) {
 				System.out.print("Digite o id do carrinho que você deseja remover:");
 				int esc = sc.nextInt();
 				id.removerId(esc);
 				System.out.println(id.getArrayId(esc));
-			}if(resp2 ==4) {
+			}
+			if (resp2 == 4) {
 				System.out.print("Digite o id do carrinho que você deseja visualizar");
 				System.out.println(id.getArrayId(sc.nextInt()));
 			}

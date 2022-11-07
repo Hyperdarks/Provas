@@ -1,6 +1,6 @@
 package a3;
 
-public class Atributos extends Biblioteca{
+public class Atributos extends Biblioteca {
 	private String atributo;
 	private int id;
 	private String quantLivro;
@@ -46,6 +46,7 @@ public class Atributos extends Biblioteca{
 	public void setQuantLivro(String quantLivro) {
 		this.quantLivro = quantLivro;
 	}
+
 	public int getId() {
 		return id;
 	}
@@ -55,10 +56,9 @@ public class Atributos extends Biblioteca{
 	}
 
 	public String atributo() {
-		return atributo = "Nome do livro: " + getNomeLivro() + "\nAutor do livro: " + getAutorLivro() + "\nAssunto do livro: " + getAssuntoLivro()
-				+"\npreco do livro: "+getPreco() + "\nQuantidade de livros: "+ getQuantLivro();
+		return atributo = "Nome do livro: " + getNomeLivro() + "\nAutor do livro: " + getAutorLivro()
+				+ "\nAssunto do livro: " + getAssuntoLivro() + "\npreco do livro: " + getPreco()
+				+ "\nQuantidade de livros: " + getQuantLivro();
 	}
-
-
 
 }
