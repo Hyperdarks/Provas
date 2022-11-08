@@ -16,15 +16,15 @@ public class Biblioteca {
 		ArrayId id = new ArrayId();
 		int count = 1;
 		while (resp == 's' || resp == 'S') {
-			resp = 'o';
+			resp = 'O';
 			System.out.println("1- adicionar um novo livro (objeto) ao seu carrinho"
 					+ "\n2 - Editar/Atualizar uma informação de um livro no seu carrinho"
 					+ "\n3- remover um atributo de um livro do seu carrinho"
 					+ "\n4- Ver um livro especifico no seu carrinho" + "");
 			System.out.printf("O que vocè quer fazer? ");
 			resp2 = sc.nextInt();
-			if (resp2 <0|| resp2 >4) {
-				while (resp2 <0|| resp2 >4) {
+			if (resp2 < 0 || resp2 > 4) {
+				while (resp2 < 0 || resp2 > 4) {
 					System.out.println("Desculpe, esse valor não é valido, digite novamente");
 					System.out.println("1- adicionar um novo livro (objeto) ao seu carrinho"
 							+ "\n2 - Editar/Atualizar uma informação de um livro no seu carrinho"
@@ -35,27 +35,17 @@ public class Biblioteca {
 			}
 			if (resp2 == 1) {
 				at.construtor();
-				/*System.out.print("Digite o nome do livro: ");
-				at.setNomeLivro(sc.nextLine());
-				System.out.print("Digite o autor do livro: ");
-				at.setAutorLivro(sc.nextLine());
-				System.out.print("Digite o assunto do livro: ");
-				at.setAssuntoLivro(sc.nextLine());
-				System.out.print("Digite o preço do livro: ");
-				at.setPreco(sc.nextLine());
-				System.out.print("Digite a quantidade do mesmo livro: ");
-				at.setQuantLivro(sc.nextLine());*/
 				at.setId(count);
 				id.arrayID(at.getId(), at.getNomeLivro(), at.getAutorLivro(), at.getAssuntoLivro(), at.getPreco(),
 						at.getQuantLivro());
 				count++;
 			}
-			// System.out.println(count);
 			if (resp2 == 2) {
 				System.out.println("Digite o ID do carrinho que voce deseja atualizar um atributo");
 				int esc = sc.nextInt();
 				id.mudarAtributos(esc);
 				System.out.println(id.getArrayId(esc));
+				//asdasdasd
 
 			}
 			if (resp2 == 3) {
@@ -76,5 +66,4 @@ public class Biblioteca {
 		System.out.println(id.total());
 		sc.close();
 	}
-
 }
