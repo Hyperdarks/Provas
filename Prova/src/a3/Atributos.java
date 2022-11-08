@@ -1,6 +1,9 @@
 package a3;
 
+import java.util.Scanner;
+
 public class Atributos extends Biblioteca {
+	Scanner sc = new Scanner(System.in);
 	private String atributo;
 	private int id;
 	private String quantLivro;
@@ -60,5 +63,6 @@ public class Atributos extends Biblioteca {
 				+ "\nAssunto do livro: " + getAssuntoLivro() + "\npreco do livro: " + getPreco()
 				+ "\nQuantidade de livros: " + getQuantLivro();
 	}
+	
 
 }
