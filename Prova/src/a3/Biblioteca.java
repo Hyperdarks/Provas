@@ -34,8 +34,8 @@ public class Biblioteca {
 				}
 			}
 			if (resp2 == 1) {
-				sc.nextLine();
-				System.out.print("Digite o nome do livro: ");
+				at.construtor();
+				/*System.out.print("Digite o nome do livro: ");
 				at.setNomeLivro(sc.nextLine());
 				System.out.print("Digite o autor do livro: ");
 				at.setAutorLivro(sc.nextLine());
@@ -44,7 +44,7 @@ public class Biblioteca {
 				System.out.print("Digite o preço do livro: ");
 				at.setPreco(sc.nextLine());
 				System.out.print("Digite a quantidade do mesmo livro: ");
-				at.setQuantLivro(sc.nextLine());
+				at.setQuantLivro(sc.nextLine());*/
 				at.setId(count);
 				id.arrayID(at.getId(), at.getNomeLivro(), at.getAutorLivro(), at.getAssuntoLivro(), at.getPreco(),
 						at.getQuantLivro());

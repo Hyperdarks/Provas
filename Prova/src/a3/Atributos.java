@@ -63,6 +63,17 @@ public class Atributos extends Biblioteca {
 				+ "\nAssunto do livro: " + getAssuntoLivro() + "\npreco do livro: " + getPreco()
 				+ "\nQuantidade de livros: " + getQuantLivro();
 	}
-	
+	public void construtor() {
+		System.out.print("Digite o nome do livro: ");
+		setNomeLivro(sc.nextLine());
+		System.out.print("Digite o autor do livro: ");
+		setAutorLivro(sc.nextLine());
+		System.out.print("Digite o assunto do livro: ");
+		setAssuntoLivro(sc.nextLine());
+		System.out.print("Digite o preço do livro: ");
+		setPreco(sc.nextLine());
+		System.out.print("Digite a quantidade do mesmo livro: ");
+		setQuantLivro(sc.nextLine());
+	}
 
 }
