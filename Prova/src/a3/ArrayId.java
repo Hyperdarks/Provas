@@ -62,28 +62,29 @@ public class ArrayId extends Atributos {
 
 			this.total = total - (Integer.parseInt(arrayId[id2][4]) * Integer.parseInt(arrayId[id2][5]));
 			for (int i = id2; i < arrayId.length - 1; i++) {
-				this.arrayId[i][0] = arrayId2[i + 1][0];
+				this.arrayId[i][0] = arrayId2[i][0];
 				this.arrayId[i][1] = arrayId2[i + 1][1];
 				this.arrayId[i][2] = arrayId2[i + 1][2];
 				this.arrayId[i][3] = arrayId2[i + 1][3];
 				this.arrayId[i][4] = arrayId2[i + 1][4];
 				this.arrayId[i][5] = arrayId2[i + 1][5];
 			}
-			for (int i = 0; i < arrayId.length; i++) {
+			for (int i = 1; i < arrayId.length; i++) {
 				this.arrayId2[i][i] = arrayId[i][i];
 
 			}
 		} else {
 			
+			this.total = total - (Integer.parseInt(arrayId[id2][4]) * Integer.parseInt(arrayId[id2][5]));
 			for (int i = id2; i < arrayId2.length - 1; i++) {
-				this.arrayId2[i][0] = arrayId2[i + 1][0];
+				this.arrayId2[i][0] = arrayId2[i][0];
 				this.arrayId2[i][1] = arrayId2[i + 1][1];
 				this.arrayId2[i][2] = arrayId2[i + 1][2];
 				this.arrayId2[i][3] = arrayId2[i + 1][3];
 				this.arrayId2[i][4] = arrayId2[i + 1][4];
 				this.arrayId2[i][5] = arrayId2[i + 1][5];
 			}
-			for (int i = 0; i < 6; i++) {
+			for (int i = 1; i < 6; i++) {
 				this.arrayId[i][i] = arrayId2[i][i];
 
 			}
@@ -103,35 +104,25 @@ public class ArrayId extends Atributos {
 		if (id2 < 6) {
 			if (opcao == 1) {
 				this.arrayId[id2][1] = opcao2;
-			}
-			if (opcao == 2) {
-				this.arrayId[id2][2] = opcao2;
-			}
-			if (opcao == 3) {
-				this.arrayId[id2][3] = opcao2;
-			}
-			if (opcao == 4) {
-				this.arrayId[id2][4] = opcao2;
-			}
-			if (opcao == 5) {
-				this.arrayId[id2][5] = opcao2;
-			}
-		} else {
-			if (opcao == 1) {
 				this.arrayId2[id2][1] = opcao2;
 			}
 			if (opcao == 2) {
+				this.arrayId[id2][2] = opcao2;
 				this.arrayId2[id2][2] = opcao2;
 			}
 			if (opcao == 3) {
+				this.arrayId[id2][3] = opcao2;
 				this.arrayId2[id2][3] = opcao2;
 			}
 			if (opcao == 4) {
+				this.arrayId[id2][4] = opcao2;
 				this.arrayId2[id2][4] = opcao2;
 			}
 			if (opcao == 5) {
+				this.arrayId[id2][5] = opcao2;
 				this.arrayId2[id2][5] = opcao2;
 			}
+		
 		}
 	}
 }

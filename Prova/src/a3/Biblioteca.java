@@ -17,9 +17,9 @@ public class Biblioteca {
 		int count = 1;
 		while (resp == 's' || resp == 'S') {
 			resp = 'o';
-			System.out.println("1- adicionar um novo livro (objeto) ao seu carrinho"
+			System.out.println("1- Adicionar um novo livro (objeto) ao seu carrinho"
 					+ "\n2 - Editar/Atualizar uma informação de um livro no seu carrinho"
-					+ "\n3- remover um atributo de um livro do seu carrinho"
+					+ "\n3- Remover uum livro do seu carrinho"
 					+ "\n4- Ver um livro especifico no seu carrinho" + "");
 			System.out.printf("O que vocè quer fazer? ");
 			resp2 = sc.nextInt();
@@ -28,7 +28,7 @@ public class Biblioteca {
 					System.out.println("Desculpe, esse valor não é valido, digite novamente");
 					System.out.println("1- adicionar um novo livro (objeto) ao seu carrinho"
 							+ "\n2 - Editar/Atualizar uma informação de um livro no seu carrinho"
-							+ "\n3- remover um atributo de um livro do seu carrinho"
+							+ "\n3- Remover um atributo de um livro do seu carrinho"
 							+ "\n4- Ver um livro especifico no seu carrinho" + "");
 					resp2 = sc.nextInt();
 				}
