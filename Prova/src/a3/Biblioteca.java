@@ -16,7 +16,7 @@ public class Biblioteca {
 		ArrayId id = new ArrayId();
 		int count = 1;
 		while (resp == 's' || resp == 'S') {
-			resp = 'O';
+			resp = 'o';
 			System.out.println("1- adicionar um novo livro (objeto) ao seu carrinho"
 					+ "\n2 - Editar/Atualizar uma informação de um livro no seu carrinho"
 					+ "\n3- remover um atributo de um livro do seu carrinho"
@@ -45,7 +45,6 @@ public class Biblioteca {
 				int esc = sc.nextInt();
 				id.mudarAtributos(esc);
 				System.out.println(id.getArrayId(esc));
-				//asdasdasd
 
 			}
 			if (resp2 == 3) {
