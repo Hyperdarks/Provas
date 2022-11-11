@@ -115,12 +115,18 @@ public class ArrayId extends Atributos {
 				this.arrayId2[id2][3] = opcao2;
 			}
 			if (opcao == 4) {
+				this.total = total - Integer.parseInt(arrayId[id2][4]) + Integer.parseInt(arrayId[id2][5]);
 				this.arrayId[id2][4] = opcao2;
 				this.arrayId2[id2][4] = opcao2;
+				this.total = total - Integer.parseInt(arrayId[id2][4]) + Integer.parseInt(arrayId[id2][5]);
+				this.arrayId2[id2][4] = arrayId[id2][4];
 			}
 			if (opcao == 5) {
+				this.total = total - Integer.parseInt(arrayId[id2][4]) + Integer.parseInt(arrayId[id2][5]);
 				this.arrayId[id2][5] = opcao2;
 				this.arrayId2[id2][5] = opcao2;
+				this.total = total - Integer.parseInt(arrayId[id2][4]) + Integer.parseInt(arrayId[id2][5]);
+				this.arrayId2[id2][5] = arrayId[id2][5];
 			}
 		
 		}

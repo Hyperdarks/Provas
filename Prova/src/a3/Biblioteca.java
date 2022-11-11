@@ -38,6 +38,7 @@ public class Biblioteca {
 				at.setId(count);
 				id.arrayID(at.getId(), at.getNomeLivro(), at.getAutorLivro(), at.getAssuntoLivro(), at.getPreco(),
 						at.getQuantLivro());
+				System.out.println("id desse livro no carrinho: "+at.getId());
 				count++;
 			}
 			if (resp2 == 2) {
