@@ -21,11 +21,11 @@ public class PetShop {
 			resp2 = sc.nextInt();
 			if (resp2 == 1) {
 				sc.nextLine();
-				System.out.println("Digite o nome do animal: ");
+				System.out.print("Digite o nome do animal: ");
 				at.setNome(sc.nextLine());
-				System.out.println("Digite a especie do animal: ");
+				System.out.print("Digite a especie do animal: ");
 				at.setEspecie(sc.nextLine());
-				System.out.println("Digite a raça do animal: ");
+				System.out.print("Digite a raça do animal: ");
 				at.setRaca(sc.nextLine());
 				System.out.println("Qual opcao você vai querer? \n1- Dar banho \n2- Tosagem \n3-Dar vacina"
 						+ " \n4- Banho e tosa \n5-tosa e vacina \n6-banho e vacina \n7- Todos os tres");
@@ -35,7 +35,7 @@ public class PetShop {
 							"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
 					opcao = sc.nextInt();
 					while (opcao > 2 || opcao < 1) {
-						System.out.println("Desculpe essa opcão nao existe, por favor digite novamente");
+						System.out.print("Desculpe essa opcão nao existe, por favor digite novamente");
 						opcao = sc.nextInt();
 					}
 					at.setBanho(opcao);
@@ -101,7 +101,7 @@ public class PetShop {
 
 			}
 			if (resp2 == 2) {
-				System.out.println("Digite o ID do pedido que voce deseja atualizar um atributo");
+				System.out.print("Digite o ID do pedido que voce deseja atualizar um atributo");
 				int esc = sc.nextInt();
 				System.out.println(
 						"Digite o que voce quer atualizar\n1- Nome do animal\n2-Especie do animal\n3-raça do animal"
@@ -111,12 +111,15 @@ public class PetShop {
 				System.out.println(id.getArrayId(esc));
 			}
 			if (resp2 == 4) {
-				System.out.println("Digite o ID do pedido que voce deseja atualizar um atributo");
+				System.out.print("Digite o ID do pedido que voce deseja visualizar as informações: ");
 				int esc = sc.nextInt();
 				System.out.println(id.getArrayId(esc));
 			}
-			System.out.println("Você quer continuar o programa? (s)/(n)");
+			System.out.print("Você quer continuar o programa? (s)/(n)");
 			resp = sc.next().charAt(0);
 		}
+		System.out.println("Você decidiu sair do programa.");
+		sc.close();
+		
 	}
 }
