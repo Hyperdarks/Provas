@@ -94,9 +94,6 @@ public class PetShop {
 						at.getVacina(), at.getPreco());
 				System.out.println(id.getArrayId(count));
 				count++;
-				System.out.println("Você quer continuar o programa? (s)/(n)");
-				resp = sc.next().charAt(0);
-				sc.nextLine();
 				at.setTosa(5);
 				at.setBanho(5);
 				at.setVacina(5);
@@ -113,6 +110,13 @@ public class PetShop {
 				id.mudarAtributos(esc, esc2);
 				System.out.println(id.getArrayId(esc));
 			}
+			if (resp2 == 4) {
+				System.out.println("Digite o ID do pedido que voce deseja atualizar um atributo");
+				int esc = sc.nextInt();
+				System.out.println(id.getArrayId(esc));
+			}
+			System.out.println("Você quer continuar o programa? (s)/(n)");
+			resp = sc.next().charAt(0);
 		}
 	}
 }

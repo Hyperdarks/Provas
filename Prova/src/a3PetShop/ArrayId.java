@@ -56,9 +56,59 @@ public class ArrayId {
 			this.arrayId2[id2][3] = opcao2;
 		}
 		if (opcao == 4) {
-			String opcao2 = sc.nextLine();
-			this.arrayId[id2][4] = opcao2;
-			this.arrayId2[id2][4] = opcao2;
+			System.out.println(
+					"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
+			int opcao2 = sc.nextInt();
+			if (opcao2 == 1) {
+				if (arrayId2[id2][4] == "110"||arrayId[id2][4] == "110") {
+					total = Integer.parseInt(arrayId2[id2][7]) - 110 + 70;
+					Integer tot = total;
+					this.arrayId2[id2][7] = tot.toString();
+					this.arrayId[id2][7] = tot.toString();
+					this.arrayId[id2][4] = "70";
+					this.arrayId2[id2][4] = "70";
+				} else if (arrayId2[id2][4] == "70"||arrayId[id2][4] == "70") {
+					this.arrayId[id2][4] = arrayId[id2][4];
+					this.arrayId2[id2][4] = arrayId2[id2][4];
+				} else {
+					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+						arrayId2[id2][7] = "0";
+						arrayId[id2][7] = "0";
+					}
+					this.arrayId[id2][4] = "70";
+					this.arrayId2[id2][4] = "70";
+					total = Integer.parseInt(arrayId[id2][7]) + 70;
+					Integer tot = total;
+					this.arrayId2[id2][7] = tot.toString();
+					this.arrayId[id2][7] = tot.toString();
+				}
+				
+			}
+			if (opcao2 == 2) {
+				if (arrayId2[id2][4] == "70"||arrayId[id2][4] == "70") {
+					total = Integer.parseInt(arrayId2[id2][7]) + 110 - 70;
+					Integer tot = total;
+					this.arrayId2[id2][7] = tot.toString();
+					this.arrayId[id2][7] = tot.toString();
+					this.arrayId[id2][4] = "110";
+					this.arrayId2[id2][4] = "110";
+				} else if (arrayId2[id2][4] == "70"||arrayId[id2][4] == "70") {
+					this.arrayId[id2][4] = arrayId[id2][4];
+					this.arrayId2[id2][4] = arrayId2[id2][4];
+				} else {
+					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+						arrayId2[id2][7] = "0";
+						arrayId[id2][7] = "0";
+					}
+					this.arrayId[id2][4] = "110";
+					this.arrayId2[id2][4] = "110";
+					total = Integer.parseInt(arrayId[id2][7]) + 110;
+					Integer tot = total;
+					this.arrayId2[id2][7] = tot.toString();
+					this.arrayId[id2][7] = tot.toString();
+				}
+			}
+			
 		}
 		if (opcao == 5) {
 			System.out.println("Qual tipo de tosa você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
@@ -176,12 +226,12 @@ public class ArrayId {
 			return "\nid do produto: " + arrayId[id][0] + "\n1- Nome do animal: " + arrayId[id][1]
 					+ "\n2-Especie do animal: " + arrayId[id][2] + "\n3-Raca do animal: " + arrayId[id][3]
 					+ "\n4-Preco do banho: " + arrayId[id][4] + "\n5-Preco da tosa: " + arrayId[id][5]
-					+ "\n5-Preco da vacina: " + arrayId[id][6] + "\n5-Preco total: " + arrayId[id][7];
+					+ "\n6-Preco da vacina: " + arrayId[id][6] + "\n7-Preco total: " + arrayId[id][7];
 		} else {
 			return "\nid do produto: " + arrayId2[id][0] + "\n1- Nome do animal: " + arrayId2[id][1]
 					+ "\n2-Especie do animal: " + arrayId2[id][2] + "\n3-Raca do animal: " + arrayId2[id][3]
 					+ "\n4-Preco do banho: " + arrayId2[id][4] + "\n5-Preco da tosa: " + arrayId2[id][5]
-					+ "\n5-Preco da vacina: " + arrayId2[id][6] + "\n5-Preco total: " + arrayId2[id][7];
+					+ "\n6-Preco da vacina: " + arrayId2[id][6] + "\n7-Preco total: " + arrayId2[id][7];
 		}
 
 	}
