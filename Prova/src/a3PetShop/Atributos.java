@@ -1,6 +1,10 @@
 package a3PetShop;
 
+import java.util.Scanner;
+
+
 public class Atributos extends PetShop {
+	Scanner sc = new Scanner(System.in);
 	String nome, especie, raca;
 	String banho, tosa, vacina;
 	public int id, preco;
@@ -92,6 +96,22 @@ public class Atributos extends PetShop {
 		} else {
 			this.vacina = "Não selecionado";
 		}
+	}
+	
+	public void construtor() {
+		System.out.print("Digite o nome do animal: ");
+		setNome(sc.nextLine());
+		System.out.print("Digite a especie do animal: ");
+		setEspecie(sc.nextLine());
+		System.out.print("Digite a raça do animal: ");
+		setRaca(sc.nextLine());
+		setTosa(5);
+		setBanho(5);
+		setVacina(5);
+		setPreco(0);
+	}
+	public void padrao() {
+		
 	}
 
 }

@@ -17,16 +17,15 @@ public class PetShop {
 		ArrayId id = new ArrayId();
 		while (resp == 's' || resp == 'S') {
 			System.out.println(
-					"O que você quer fazer? \n1- adicionar um novo pedido \n2- Atualizar uma informação de um pedido ");
+					"O que você quer fazer? \n1- adicionar um novo pedido \n2- Atualizar uma informação de um pedido "
+                                                + "\n3- remover um pedido do carrinho \n4- Ver a informação do pedido");
 			resp2 = sc.nextInt();
 			if (resp2 == 1) {
-				sc.nextLine();
-				System.out.print("Digite o nome do animal: ");
-				at.setNome(sc.nextLine());
-				System.out.print("Digite a especie do animal: ");
-				at.setEspecie(sc.nextLine());
-				System.out.print("Digite a raça do animal: ");
-				at.setRaca(sc.nextLine());
+				at.construtor();
+				at.setTosa(5);
+				at.setBanho(5);
+				at.setVacina(5);
+				at.setPreco(0);
 				System.out.println("Qual opcao você vai querer? \n1- Dar banho \n2- Tosagem \n3-Dar vacina"
 						+ " \n4- Banho e tosa \n5-tosa e vacina \n6-banho e vacina \n7- Todos os tres");
 				opcao = sc.nextInt();
@@ -94,10 +93,6 @@ public class PetShop {
 						at.getVacina(), at.getPreco());
 				System.out.println(id.getArrayId(count));
 				count++;
-				at.setTosa(5);
-				at.setBanho(5);
-				at.setVacina(5);
-				at.setPreco(0);
 
 			}
 			if (resp2 == 2) {
@@ -110,6 +105,12 @@ public class PetShop {
 				id.mudarAtributos(esc, esc2);
 				System.out.println(id.getArrayId(esc));
 			}
+                        if (resp2 ==3){
+                            System.out.print("Digite o ID do pedido que voce deseja remover");
+                            int esc = sc.nextInt();
+                            id.removerId(esc);
+                            System.out.println(id.getArrayId(esc));
+                        }
 			if (resp2 == 4) {
 				System.out.print("Digite o ID do pedido que voce deseja visualizar as informações: ");
 				int esc = sc.nextInt();
