@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class Atributos extends PetShop {
 	Scanner sc = new Scanner(System.in);
-	String nome, especie, raca;
-	String banho, tosa, vacina;
-	public int id, preco;
+	private String nome, especie, raca;
+	private String banho, tosa, vacina;
+	private int id, preco;
 
 	public String getNome() {
 		return nome;
@@ -75,8 +75,8 @@ public class Atributos extends PetShop {
 			this.preco = preco + 80;
 		}
 		else if (opcao == 2) {
-			this.tosa = "130";
-			this.preco = preco + 130;
+			this.tosa = "145";
+			this.preco = preco + 145;
 		} else {
 			this.tosa = "Não selecionado";
 		}
