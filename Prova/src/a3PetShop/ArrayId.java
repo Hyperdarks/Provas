@@ -6,9 +6,9 @@ public class ArrayId {
 	Scanner sc = new Scanner(System.in);
 	Atributos at = new Atributos();
 	PetShop ps = new PetShop();
-	public int total;
-	public int var = 8;
-	public String[][] arrayId = new String[var][var];
+	private int total;
+	private int var = 8;
+	private String[][] arrayId = new String[var][var];
 
 	String[][] arrayId2 = new String[var * 1000][var * 1000];
 
@@ -56,22 +56,22 @@ public class ArrayId {
 			this.arrayId2[id2][3] = opcao2;
 		}
 		if (opcao == 4) {
-			System.out.println(
-					"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
+			System.out
+					.println("Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
 			int opcao2 = sc.nextInt();
 			if (opcao2 == 1) {
-				if (arrayId2[id2][4] == "110"||arrayId[id2][4] == "110") {
+				if (arrayId2[id2][4] == "110" || arrayId[id2][4] == "110") {
 					total = Integer.parseInt(arrayId2[id2][7]) - 110 + 70;
 					Integer tot = total;
 					this.arrayId2[id2][7] = tot.toString();
 					this.arrayId[id2][7] = tot.toString();
 					this.arrayId[id2][4] = "70";
 					this.arrayId2[id2][4] = "70";
-				} else if (arrayId2[id2][4] == "70"||arrayId[id2][4] == "70") {
+				} else if (arrayId2[id2][4] == "70" || arrayId[id2][4] == "70") {
 					this.arrayId[id2][4] = arrayId[id2][4];
 					this.arrayId2[id2][4] = arrayId2[id2][4];
 				} else {
-					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+					if (arrayId2[id2][7] == null || arrayId[id2][7] == null) {
 						arrayId2[id2][7] = "0";
 						arrayId[id2][7] = "0";
 					}
@@ -82,21 +82,21 @@ public class ArrayId {
 					this.arrayId2[id2][7] = tot.toString();
 					this.arrayId[id2][7] = tot.toString();
 				}
-				
+
 			}
 			if (opcao2 == 2) {
-				if (arrayId2[id2][4] == "70"||arrayId[id2][4] == "70") {
+				if (arrayId2[id2][4] == "70" || arrayId[id2][4] == "70") {
 					total = Integer.parseInt(arrayId2[id2][7]) + 110 - 70;
 					Integer tot = total;
 					this.arrayId2[id2][7] = tot.toString();
 					this.arrayId[id2][7] = tot.toString();
 					this.arrayId[id2][4] = "110";
 					this.arrayId2[id2][4] = "110";
-				} else if (arrayId2[id2][4] == "110"||arrayId[id2][4] == "110") {
+				} else if (arrayId2[id2][4] == "110" || arrayId[id2][4] == "110") {
 					this.arrayId[id2][4] = arrayId[id2][4];
 					this.arrayId2[id2][4] = arrayId2[id2][4];
 				} else {
-					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+					if (arrayId2[id2][7] == null || arrayId[id2][7] == null) {
 						arrayId2[id2][7] = "0";
 						arrayId[id2][7] = "0";
 					}
@@ -108,24 +108,24 @@ public class ArrayId {
 					this.arrayId[id2][7] = tot.toString();
 				}
 			}
-			
+
 		}
 		if (opcao == 5) {
 			System.out.println("Qual tipo de tosa você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
 			int opcao2 = sc.nextInt();
 			if (opcao2 == 1) {
-				if (arrayId2[id2][5] == "145"||arrayId[id2][5] == "145") {
+				if (arrayId2[id2][5] == "145" || arrayId[id2][5] == "145") {
 					total = Integer.parseInt(arrayId2[id2][7]) - 145 + 80;
 					Integer tot = total;
 					this.arrayId2[id2][7] = tot.toString();
 					this.arrayId[id2][7] = tot.toString();
 					this.arrayId[id2][5] = "80";
 					this.arrayId2[id2][5] = "80";
-				} else if (arrayId2[id2][5] == "80"||arrayId[id2][5] == "80") {
+				} else if (arrayId2[id2][5] == "80" || arrayId[id2][5] == "80") {
 					this.arrayId[id2][5] = arrayId[id2][5];
 					this.arrayId2[id2][5] = arrayId2[id2][5];
 				} else {
-					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+					if (arrayId2[id2][7] == null || arrayId[id2][7] == null) {
 						arrayId2[id2][7] = "0";
 						arrayId[id2][7] = "0";
 					}
@@ -139,19 +139,19 @@ public class ArrayId {
 				}
 			}
 			if (opcao2 == 2) {
-				if (arrayId2[id2][5] == "80"||arrayId[id2][5] == "80") {
+				if (arrayId2[id2][5] == "80" || arrayId[id2][5] == "80") {
 					total = Integer.parseInt(arrayId2[id2][7]) + 145 - 80;
 					Integer tot = total;
 					this.arrayId2[id2][7] = tot.toString();
 					this.arrayId[id2][7] = tot.toString();
 					this.arrayId[id2][5] = "145";
 					this.arrayId2[id2][5] = "145";
-				} else if (arrayId2[id2][5] == "145"||arrayId[id2][5] == "145") {
+				} else if (arrayId2[id2][5] == "145" || arrayId[id2][5] == "145") {
 					this.arrayId[id2][5] = arrayId[id2][5];
 					this.arrayId2[id2][5] = arrayId2[id2][5];
 
 				} else {
-					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+					if (arrayId2[id2][7] == null || arrayId[id2][7] == null) {
 						arrayId2[id2][7] = "0";
 						arrayId[id2][7] = "0";
 					}
@@ -168,19 +168,19 @@ public class ArrayId {
 			System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
 			int opcao2 = sc.nextInt();
 			if (opcao2 == 1) {
-				if (arrayId[id2][6] == "130"||arrayId2[id2][6] == "130") {
+				if (arrayId[id2][6] == "130" || arrayId2[id2][6] == "130") {
 					total = Integer.parseInt(arrayId2[id2][7]) - 130 + 80;
 					Integer tot = total;
 					this.arrayId2[id2][7] = tot.toString();
 					this.arrayId2[id2][7] = tot.toString();
 					this.arrayId[id2][6] = "80";
 					this.arrayId2[id2][6] = "80";
-				} else if (arrayId[id2][6] == "80"||arrayId2[id2][6] == "80") {
+				} else if (arrayId[id2][6] == "80" || arrayId2[id2][6] == "80") {
 					this.arrayId[id2][6] = arrayId[id2][6];
 					this.arrayId2[id2][6] = arrayId2[id2][6];
 
 				} else {
-					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+					if (arrayId2[id2][7] == null || arrayId[id2][7] == null) {
 						arrayId2[id2][7] = "0";
 						arrayId[id2][7] = "0";
 					}
@@ -194,10 +194,10 @@ public class ArrayId {
 			}
 			if (opcao2 == 2) {
 				at.setPreco(0);
-				if (arrayId[id2][6] == "130"||arrayId2[id2][6] == "130") {
+				if (arrayId[id2][6] == "130" || arrayId2[id2][6] == "130") {
 					this.arrayId[id2][6] = arrayId[id2][6];
 					this.arrayId2[id2][6] = arrayId2[id2][6];
-				} else if (arrayId[id2][6] == "80"||arrayId2[id2][6] == "80") {
+				} else if (arrayId[id2][6] == "80" || arrayId2[id2][6] == "80") {
 					total = Integer.parseInt(arrayId2[id2][7]) + 130 - 80;
 					Integer tot = total;
 					this.arrayId[id2][6] = "130";
@@ -205,7 +205,7 @@ public class ArrayId {
 					this.arrayId[id2][7] = tot.toString();
 					this.arrayId2[id2][7] = tot.toString();
 				} else {
-					if(arrayId2[id2][7] == null||arrayId[id2][7] == null) {
+					if (arrayId2[id2][7] == null || arrayId[id2][7] == null) {
 						arrayId2[id2][7] = "0";
 						arrayId[id2][7] = "0";
 					}
@@ -235,10 +235,10 @@ public class ArrayId {
 		}
 
 	}
-        public void removerId(int id2) {
+
+	public void removerId(int id2) {
 		if (id2 < 6) {
 
-			
 			for (int i = id2; i < arrayId.length - 1; i++) {
 				this.arrayId[i][0] = arrayId2[i][0];
 				this.arrayId[i][1] = arrayId2[i + 1][1];
@@ -246,15 +246,15 @@ public class ArrayId {
 				this.arrayId[i][3] = arrayId2[i + 1][3];
 				this.arrayId[i][4] = arrayId2[i + 1][4];
 				this.arrayId[i][5] = arrayId2[i + 1][5];
-                                this.arrayId[i][6] = arrayId2[i + 1][6];
-                                this.arrayId[i][7] = arrayId2[i + 1][7];
+				this.arrayId[i][6] = arrayId2[i + 1][6];
+				this.arrayId[i][7] = arrayId2[i + 1][7];
 			}
 			for (int i = 1; i < arrayId.length; i++) {
 				this.arrayId2[i][i] = arrayId[i][i];
 
 			}
 		} else {
-			
+
 			this.total = total - (Integer.parseInt(arrayId[id2][4]) * Integer.parseInt(arrayId[id2][5]));
 			for (int i = id2; i < arrayId2.length - 1; i++) {
 				this.arrayId2[i][0] = arrayId2[i][0];
@@ -263,14 +263,14 @@ public class ArrayId {
 				this.arrayId2[i][3] = arrayId2[i + 1][3];
 				this.arrayId2[i][4] = arrayId2[i + 1][4];
 				this.arrayId2[i][5] = arrayId2[i + 1][5];
-                                this.arrayId2[i][6] = arrayId2[i + 1][6];
-                                this.arrayId2[i][7] = arrayId2[i + 1][7];
+				this.arrayId2[i][6] = arrayId2[i + 1][6];
+				this.arrayId2[i][7] = arrayId2[i + 1][7];
 			}
 			for (int i = 1; i < 6; i++) {
 				this.arrayId[i][i] = arrayId2[i][i];
 
 			}
-			
+
 		}
 	}
 
