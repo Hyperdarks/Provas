@@ -16,24 +16,26 @@ public class ArrayId {
 			int preco) {
 		Integer preco3 = preco;
 		Integer id2 = id;
-
 		String preco2 = preco3.toString();
-		this.arrayId[id][0] = id2.toString();
-		this.arrayId[id][1] = nome;
-		this.arrayId[id][2] = especie;
-		this.arrayId[id][3] = raca;
-		this.arrayId[id][4] = banho;
-		this.arrayId[id][5] = tosa;
-		this.arrayId[id][6] = vacina;
-		this.arrayId[id][7] = preco2;
-		this.arrayId2[id][0] = id2.toString();
-		this.arrayId2[id][1] = nome;
-		this.arrayId2[id][2] = especie;
-		this.arrayId2[id][3] = raca;
-		this.arrayId2[id][4] = banho;
-		this.arrayId2[id][5] = tosa;
-		this.arrayId2[id][6] = vacina;
-		this.arrayId2[id][7] = preco2;
+		if (id < 8) {
+			this.arrayId[id][0] = id2.toString();
+			this.arrayId[id][1] = nome;
+			this.arrayId[id][2] = especie;
+			this.arrayId[id][3] = raca;
+			this.arrayId[id][4] = banho;
+			this.arrayId[id][5] = tosa;
+			this.arrayId[id][6] = vacina;
+			this.arrayId[id][7] = preco2;
+		} else {
+			this.arrayId2[id][0] = id2.toString();
+			this.arrayId2[id][1] = nome;
+			this.arrayId2[id][2] = especie;
+			this.arrayId2[id][3] = raca;
+			this.arrayId2[id][4] = banho;
+			this.arrayId2[id][5] = tosa;
+			this.arrayId2[id][6] = vacina;
+			this.arrayId2[id][7] = preco2;
+		}
 
 	}
 

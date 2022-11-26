@@ -12,83 +12,15 @@ public class PetShop {
 		int resp2 = 0;
 		int[] array = new int[10];
 		int count = 1;
-		int opcao;
 		Atributos at = new Atributos();
 		ArrayId id = new ArrayId();
 		while (resp == 's' || resp == 'S') {
 			System.out.println(
 					"O que você quer fazer? \n1- adicionar um novo pedido \n2- Atualizar uma informação de um pedido "
-                                                + "\n3- remover um pedido do carrinho \n4- Ver a informação do pedido");
+							+ "\n3- remover um pedido do carrinho \n4- Ver a informação do pedido");
 			resp2 = sc.nextInt();
 			if (resp2 == 1) {
-				at.construtor();
-				at.setTosa(5);
-				at.setBanho(5);
-				at.setVacina(5);
-				at.setPreco(0);
-				System.out.println("Qual opcao você vai querer? \n1- Dar banho \n2- Tosagem \n3-Dar vacina"
-						+ " \n4- Banho e tosa \n5-tosa e vacina \n6-banho e vacina \n7- Todos os tres");
-				opcao = sc.nextInt();
-				if (opcao == 1) {
-					System.out.println(
-							"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
-					opcao = sc.nextInt();
-					while (opcao > 2 || opcao < 1) {
-						System.out.print("Desculpe essa opcão nao existe, por favor digite novamente");
-						opcao = sc.nextInt();
-					}
-					at.setBanho(opcao);
-				}
-
-				else if (opcao == 2) {
-					System.out.println(
-							"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
-					opcao = sc.nextInt();
-					at.setTosa(opcao);
-				} else if (opcao == 3) {
-					System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
-					opcao = sc.nextInt();
-					at.setVacina(opcao);
-				} else if (opcao == 4) {
-					System.out.println(
-							"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
-					opcao = sc.nextInt();
-					at.setBanho(opcao);
-					System.out.println(
-							"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
-					opcao = sc.nextInt();
-					at.setTosa(opcao);
-				} else if (opcao == 5) {
-					System.out.println(
-							"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
-					opcao = sc.nextInt();
-					at.setTosa(opcao);
-					System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
-					opcao = sc.nextInt();
-					at.setVacina(opcao);
-				} else if (opcao == 6) {
-					System.out.println(
-							"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
-					opcao = sc.nextInt();
-					at.setBanho(opcao);
-					System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
-					opcao = sc.nextInt();
-					at.setVacina(opcao);
-
-				} else if (opcao == 7) {
-					System.out.println(
-							"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
-					opcao = sc.nextInt();
-					at.setBanho(opcao);
-					System.out.println(
-							"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
-					opcao = sc.nextInt();
-					at.setTosa(opcao);
-					System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
-					opcao = sc.nextInt();
-					at.setVacina(opcao);
-				}
-				at.setId(count);
+				at.construtor(count);
 				id.arrayId(at.getId(), at.getNome(), at.getEspecie(), at.getRaca(), at.getBanho(), at.getTosa(),
 						at.getVacina(), at.getPreco());
 				System.out.println(id.getArrayId(count));
@@ -105,12 +37,12 @@ public class PetShop {
 				id.mudarAtributos(esc, esc2);
 				System.out.println(id.getArrayId(esc));
 			}
-                        if (resp2 ==3){
-                            System.out.print("Digite o ID do pedido que voce deseja remover");
-                            int esc = sc.nextInt();
-                            id.removerId(esc);
-                            System.out.println(id.getArrayId(esc));
-                        }
+			if (resp2 == 3) {
+				System.out.print("Digite o ID do pedido que voce deseja remover");
+				int esc = sc.nextInt();
+				id.removerId(esc);
+				System.out.println(id.getArrayId(esc));
+			}
 			if (resp2 == 4) {
 				System.out.print("Digite o ID do pedido que voce deseja visualizar as informações: ");
 				int esc = sc.nextInt();
@@ -121,6 +53,6 @@ public class PetShop {
 		}
 		System.out.println("Você decidiu sair do programa.");
 		sc.close();
-		
+
 	}
 }

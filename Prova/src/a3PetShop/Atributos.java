@@ -98,7 +98,7 @@ public class Atributos extends PetShop {
 		}
 	}
 	
-	public void construtor() {
+	public void construtor(int count) {
 		System.out.print("Digite o nome do animal: ");
 		setNome(sc.nextLine());
 		System.out.print("Digite a especie do animal: ");
@@ -109,6 +109,70 @@ public class Atributos extends PetShop {
 		setBanho(5);
 		setVacina(5);
 		setPreco(0);
+		System.out.println("Qual opcao você vai querer? \n1- Dar banho \n2- Tosagem \n3-Dar vacina"
+				+ " \n4- Banho e tosa \n5-tosa e vacina \n6-banho e vacina \n7- Todos os tres");
+		int opcao = sc.nextInt();
+		if (opcao == 1) {
+			System.out.println(
+					"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
+			opcao = sc.nextInt();
+			while (opcao > 2 || opcao < 1) {
+				System.out.print("Desculpe essa opcão nao existe, por favor digite novamente");
+				opcao = sc.nextInt();
+			}
+			setBanho(opcao);
+		}
+
+		else if (opcao == 2) {
+			System.out.println(
+					"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
+			opcao = sc.nextInt();
+			setTosa(opcao);
+		} else if (opcao == 3) {
+			System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
+			opcao = sc.nextInt();
+			setVacina(opcao);
+		} else if (opcao == 4) {
+			System.out.println(
+					"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
+			opcao = sc.nextInt();
+			setBanho(opcao);
+			System.out.println(
+					"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
+			opcao = sc.nextInt();
+			setTosa(opcao);
+		} else if (opcao == 5) {
+			System.out.println(
+					"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
+			opcao = sc.nextInt();
+			setTosa(opcao);
+			System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
+			opcao = sc.nextInt();
+			setVacina(opcao);
+		} else if (opcao == 6) {
+			System.out.println(
+					"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
+			opcao = sc.nextInt();
+			setBanho(opcao);
+			System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
+			opcao = sc.nextInt();
+			setVacina(opcao);
+
+		} else if (opcao == 7) {
+			System.out.println(
+					"Qual tipo de banho você deseja? \n1- Banho simples (70) \n2- Banho com hidratação (110)");
+			opcao = sc.nextInt();
+			setBanho(opcao);
+			System.out.println(
+					"Qual tipo de tosagem você deseja? \n1- Tosa simples (80) \n2- tosa com tesoura (145)");
+			opcao = sc.nextInt();
+			setTosa(opcao);
+			System.out.println("Qual tipo de vacina você deseja? \n1- antirrábica (80) \n2- Gripe (130) ");
+			opcao = sc.nextInt();
+			setVacina(opcao);
+		}
+		setId(count);
+		sc.nextLine();
 	}
 	public void padrao() {
 		
