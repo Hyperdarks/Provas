@@ -8,13 +8,12 @@ public class PetShop {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		Locale.setDefault(Locale.US);
-		char resp = 's';
+		int resp = 1;
 		int resp2 = 0;
-		int[] array = new int[10];
-		int count = 1;
+		int count = 10;
 		Atributos at = new Atributos();
 		ArrayId id = new ArrayId();
-		while (resp == 's' || resp == 'S') {
+		while (resp == 1) {
 			System.out.println(
 					"O que você quer fazer? \n1- adicionar um novo pedido \n2- Atualizar uma informação de um pedido "
 							+ "\n3- remover um pedido do carrinho \n4- Ver a informação do pedido");
@@ -48,8 +47,8 @@ public class PetShop {
 				int esc = sc.nextInt();
 				System.out.println(id.getArrayId(esc));
 			}
-			System.out.print("Você quer continuar o programa? (s)/(n)");
-			resp = sc.next().charAt(0);
+			System.out.print("Você quer continuar o programa? (1) Sim /(2) não");
+			resp = sc.nextInt();
 		}
 		System.out.println("Você decidiu sair do programa.");
 		sc.close();
