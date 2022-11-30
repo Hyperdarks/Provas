@@ -13,7 +13,7 @@ public class ArrayId {
 
 	public void arrayId(int id, String nome, String especie, String raca, String banho, String tosa, String vacina,
 			int preco) {
-		if (id < 8) {
+		if (id < arrayId.length) {
 			this.arrayId[id][0] = id;
 			this.arrayId[id][1] = nome;
 			this.arrayId[id][2] = especie;
@@ -99,9 +99,11 @@ public class ArrayId {
 			int opcao2 = sc.nextInt();
 			if (opcao2 == 1) {
 				if (arrayId2[id2][5] == "145") {
-					this.arrayId2[id2][7] = (int) arrayId2[id2][7] - 145 + 80;;
+					this.arrayId2[id2][7] = (int) arrayId2[id2][7] - 145 + 80;
+					;
 					this.arrayId2[id2][5] = "80";
-				}if (arrayId2[id2][5] == "80") {
+				}
+				if (arrayId2[id2][5] == "80") {
 					this.arrayId2[id2][5] = arrayId2[id2][5];
 				} else {
 					if (arrayId2[id2][7] == null) {
@@ -116,7 +118,8 @@ public class ArrayId {
 				if (arrayId2[id2][5] == "80") {
 					this.arrayId2[id2][7] = (int) arrayId2[id2][7] + 145 - 80;
 					this.arrayId2[id2][5] = "145";
-				}if (arrayId2[id2][5] == "145") {
+				}
+				if (arrayId2[id2][5] == "145") {
 					this.arrayId2[id2][5] = arrayId2[id2][5];
 
 				} else {
@@ -135,7 +138,8 @@ public class ArrayId {
 				if (arrayId2[id2][6] == "130") {
 					this.arrayId2[id2][7] = (int) arrayId2[id2][7] - 130 + 80;
 					this.arrayId2[id2][6] = "80";
-				}if (arrayId2[id2][6] == "80") {
+				}
+				if (arrayId2[id2][6] == "80") {
 					this.arrayId2[id2][6] = arrayId2[id2][6];
 
 				} else {
@@ -150,7 +154,8 @@ public class ArrayId {
 				at.setPreco(0);
 				if (arrayId2[id2][6] == "130") {
 					this.arrayId2[id2][6] = arrayId2[id2][6];
-				}if (arrayId2[id2][6] == "80") {
+				}
+				if (arrayId2[id2][6] == "80") {
 					this.arrayId2[id2][6] = "130";
 					this.arrayId2[id2][7] = (int) arrayId2[id2][7] + 130 - 80;
 				} else {
@@ -161,15 +166,17 @@ public class ArrayId {
 					this.arrayId2[id2][7] = (int) arrayId2[id2][7] + 130;
 				}
 			}
-		}for(int i = 0; i <= arrayId.length; i++) {
-			this.arrayId[id2][i] = arrayId2[id2][i];
 		}
-		
+		if (id2 < arrayId.length) {
+			for (int i = 0; i < arrayId.length; i++) {
+				this.arrayId[id2][i] = arrayId2[id2][i];
+			}
+		}
 
 	}
 
 	public String getArrayId(int id) {
-		if(id < arrayId.length) {
+		if (id < arrayId.length) {
 			return "\nid do produto: " + arrayId[id][0] + "\n1- Nome do animal: " + arrayId[id][1]
 					+ "\n2-Especie do animal: " + arrayId[id][2] + "\n3-Raca do animal: " + arrayId[id][3]
 					+ "\n4-Preco do banho: " + arrayId[id][4] + "\n5-Preco da tosa: " + arrayId[id][5]
@@ -184,24 +191,17 @@ public class ArrayId {
 
 	public void removerId(int id) {
 		Object[] newArray = new Object[arrayId2.length - 1];
-		if (id > arrayId.length) {
+		if (id >= arrayId.length) {
 			for (int i = 0; i < arrayId2.length - 1; i++) {
-				if (i < id) {
-					arrayId2[id][i] = newArray[i];
-				} else if (i > id) {
-					arrayId2[id][i - 1] = newArray[i];
-				}
+				arrayId2[id][i] = newArray[i];
 			}
-			
-		}else {
-			for (int i = 0; i < arrayId.length - 1; i++) {
-				if (i < id) {
-					arrayId[id][i] = newArray[i];
-				} else if (i > id) {
-					arrayId[id][i - 1] = newArray[i];
-				}
-			}
-			
 		}
+
+		else {
+			for (int i = 0; i < 8; i++) {
+				arrayId[id][i] = newArray[i];
+			}
+		}
+
 	}
 }

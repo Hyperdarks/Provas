@@ -10,13 +10,13 @@ public class PetShop {
 		Locale.setDefault(Locale.US);
 		int resp = 1;
 		int resp2 = 0;
-		int count = 1;
+		int count = 6;
 		Atributos at = new Atributos();
 		ArrayId id = new ArrayId();
-		while (resp == 1) {
+		while (resp != 5) {
 			System.out.println(
 					"O que você quer fazer? \n1- adicionar um novo pedido \n2- Atualizar uma informação de um pedido "
-							+ "\n3- remover um pedido do carrinho \n4- Ver a informação do pedido");
+							+ "\n3- remover um pedido do carrinho \n4- Ver a informação do pedido \n5 - Sair do Programa");
 			resp2 = sc.nextInt();
 			if (resp2 == 1) {
 				at.construtor(count);
@@ -46,12 +46,12 @@ public class PetShop {
 				System.out.print("Digite o ID do pedido que voce deseja visualizar as informações: ");
 				int esc = sc.nextInt();
 				System.out.println(id.getArrayId(esc));
+			}if(resp2 == 5) {
+				System.out.println("Você decidiu sair do programa.");
+				sc.close();
+				System.exit(0);
 			}
-			System.out.print("Você quer continuar o programa? (1) Sim /(2) não ");
-			resp = sc.nextInt();
 		}
-		System.out.println("Você decidiu sair do programa.");
-		sc.close();
 
 	}
 }
