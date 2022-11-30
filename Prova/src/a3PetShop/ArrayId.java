@@ -184,7 +184,7 @@ public class ArrayId {
 
 	public void removerId(int id) {
 		Object[] newArray = new Object[arrayId2.length - 1];
-		if (id > 7) {
+		if (id > arrayId.length) {
 			for (int i = 0; i < arrayId2.length - 1; i++) {
 				if (i < id) {
 					arrayId2[id][i] = newArray[i];
