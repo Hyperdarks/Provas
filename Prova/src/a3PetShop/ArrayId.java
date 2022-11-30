@@ -161,12 +161,20 @@ public class ArrayId {
 					this.arrayId2[id2][7] = (int) arrayId2[id2][7] + 130;
 				}
 			}
+		}for(int i = 0; i <= arrayId.length; i++) {
+			this.arrayId[id2][i] = arrayId2[id2][i];
 		}
+		
 
 	}
 
 	public String getArrayId(int id) {
-
+		if(id < arrayId.length) {
+			return "\nid do produto: " + arrayId[id][0] + "\n1- Nome do animal: " + arrayId[id][1]
+					+ "\n2-Especie do animal: " + arrayId[id][2] + "\n3-Raca do animal: " + arrayId[id][3]
+					+ "\n4-Preco do banho: " + arrayId[id][4] + "\n5-Preco da tosa: " + arrayId[id][5]
+					+ "\n6-Preco da vacina: " + arrayId[id][6] + "\n7-Preco total: " + arrayId[id][7];
+		}
 		return "\nid do produto: " + arrayId2[id][0] + "\n1- Nome do animal: " + arrayId2[id][1]
 				+ "\n2-Especie do animal: " + arrayId2[id][2] + "\n3-Raca do animal: " + arrayId2[id][3]
 				+ "\n4-Preco do banho: " + arrayId2[id][4] + "\n5-Preco da tosa: " + arrayId2[id][5]
@@ -184,7 +192,16 @@ public class ArrayId {
 					arrayId2[id][i - 1] = newArray[i];
 				}
 			}
-
+			
+		}else {
+			for (int i = 0; i < arrayId.length - 1; i++) {
+				if (i < id) {
+					arrayId[id][i] = newArray[i];
+				} else if (i > id) {
+					arrayId[id][i - 1] = newArray[i];
+				}
+			}
+			
 		}
 	}
 }

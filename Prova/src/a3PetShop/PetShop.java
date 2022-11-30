@@ -10,7 +10,7 @@ public class PetShop {
 		Locale.setDefault(Locale.US);
 		int resp = 1;
 		int resp2 = 0;
-		int count = 10;
+		int count = 1;
 		Atributos at = new Atributos();
 		ArrayId id = new ArrayId();
 		while (resp == 1) {
@@ -27,7 +27,7 @@ public class PetShop {
 
 			}
 			if (resp2 == 2) {
-				System.out.print("Digite o ID do pedido que voce deseja atualizar um atributo");
+				System.out.print("Digite o ID do pedido que voce deseja atualizar um atributo: ");
 				int esc = sc.nextInt();
 				System.out.println(
 						"Digite o que voce quer atualizar\n1- Nome do animal\n2-Especie do animal\n3-raça do animal"
@@ -37,7 +37,7 @@ public class PetShop {
 				System.out.println(id.getArrayId(esc));
 			}
 			if (resp2 == 3) {
-				System.out.print("Digite o ID do pedido que voce deseja remover");
+				System.out.print("Digite o ID do pedido que voce deseja remover: ");
 				int esc = sc.nextInt();
 				id.removerId(esc);
 				System.out.println(id.getArrayId(esc));
@@ -47,7 +47,7 @@ public class PetShop {
 				int esc = sc.nextInt();
 				System.out.println(id.getArrayId(esc));
 			}
-			System.out.print("Você quer continuar o programa? (1) Sim /(2) não");
+			System.out.print("Você quer continuar o programa? (1) Sim /(2) não ");
 			resp = sc.nextInt();
 		}
 		System.out.println("Você decidiu sair do programa.");
